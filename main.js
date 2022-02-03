@@ -13,8 +13,8 @@
   let tausta6kello;
   let tausta7kello;
   const painikkeetID=["#hinta1","#hinta2","#hinta3","#hinta4","#hinta5","#hinta6","#hinta7","#hinta8","#hinta9","#hinta10","#hinta11","#hinta12"];
-  const hinnat=[1,2,3,4,5,6,7,8,8,8,9,10]; 
-  const alkuhinnat=[1,2,3,4,5,6,7,8,8,8,9,10];
+  const hinnat=[1,2,3,4,5,6,7,8,9,10,11,12]; 
+  const alkuhinnat=[1,2,3,4,5,6,7,8,9,10,11,12];
   const alapalkkiId=["#tekija","#kone","#tehdas","#kaivos","#meri","#planeetta"];
   const alapalkki=[0,0,0,0,0,0]
   const painikkeet= ["#eka","#toka","#kolmas","#neljas","#viides","#kuudes","#seiska","#kasi","#ysi","#kymppi","#ykstoista","#kakstoista"];

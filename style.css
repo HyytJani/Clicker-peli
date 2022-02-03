@@ -1,6 +1,6 @@
 :root{
 --nopeus:50s;
---pallonopeus:.4s;
+--pallonopeus:0.6s;
 --putous:1.5s;
 }
 
@@ -39,14 +39,24 @@ body{
     top: 0px;
     right:115px;
     background-image: radial-gradient(circle,red,#000);
-    cursor: pointer;               
-    }
-.pallo:focus{    
-    animation:pomppu var(--pallonopeus)   ease-out;  
-       }
-.pallo:active{
-    position: relative;
-    animation: none,click 5s;
+    cursor: pointer; 
+    opacity: 50%;                    
+    }  
+.pallo2{
+    position:fixed;
+    width: 80px;
+    height: 80px;    
+    border-radius: 50%;
+    top: 135px;
+    right:576px;
+    background-image: radial-gradient(circle,red,#000);
+    cursor: pointer; 
+          
+        }
+
+    
+.pallo2:active{     
+    animation: none,pomppu var(--pallonopeus) ease-out;
 }
 .varjo{
     position: absolute;
@@ -63,13 +73,10 @@ body{
     to {transform: rotateY(360deg);}
     }
 @keyframes pomppu{        
-    0%,100%{top: 4px;transition: all 2s;}
-    50%{top: -240px;animation-timing-function:step-end ;cursor:pointer;}
+    0%,100%{top:130px; right: 575px;}
+    50%{height: 20pxpx; width: 20px; top: -240px;right: 500px; animation-timing-function:step-end ;}
     }
-@keyframes click{
-    0%{height: 76px;      
-       top: 2px; }
-}
+
 .lattia{
     position:fixed;
     top: 265px;
@@ -173,9 +180,9 @@ body{
 
 @keyframes putoaa{
     0%{opacity: 100%;}
-    50%{opacity: 100%;}
-    75%{opacity: 50%;}
-    100%{top: 600px; opacity:0% ;}
+    50%{opacity: 100%;width: 30px; height: 30px;}
+    75%{opacity: 50%;width: 20px; height: 20px;}
+    100%{top: 600px; opacity:0% ;width: 10px; height: 10px;}
 
 }
 @keyframes putoaa2{
@@ -221,12 +228,11 @@ body{
 }
 .numeroanim{
     position: relative;
-    animation: haivytys 5s ease-in;
+    animation: haivytys 0.1s ;
 }
-@keyframes haivytys{
-    
-    0%{top: 120px; }
-    100%{top:-30px}
+@keyframes haivytys{    
+    0%{top: 90px; }
+    100%{top:60px;}
 }
 @keyframes shadow{
     0%{height: 82px;

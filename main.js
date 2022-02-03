@@ -18,11 +18,14 @@
   const alapalkkiId=["#tekija","#kone","#tehdas","#kaivos","#meri","#planeetta"];
   const alapalkki=[0,0,0,0,0,0]
   const painikkeet= ["#eka","#toka","#kolmas","#neljas","#viides","#kuudes","#seiska","#kasi","#ysi","#kymppi","#ykstoista","#kakstoista"];
-
+// klikkaus pallosta
+document.querySelector(".pallo").addEventListener("mouseup",(event) => {
+   klikkaus();
+   numero();
+})  
 function klikkaus(){  
    yhteensa=yhteensa+klikkauksenMaara;   
    setTimeout(tausta,500)
-   numero();
 }
 function ekataso(){  
    klikkauksenMaara=klikkauksenMaara+1
@@ -124,8 +127,8 @@ function lisaaPallo(){
    yhteensa=yhteensa+pallomaara;    
 }
 function tausta(){     
-   let palloLeft=Math.floor(Math.random()*1100)+"px";
-   let palloTop=Math.floor(Math.random()*100)+"px";
+   let palloLeft=Math.floor(Math.random()*400)+500+"px";
+   let palloTop=Math.floor(Math.random()*100)-100+"px";
    let pallo=document.createElement("div");
    pallo.className="taustapallo";      
    pallo.style.left= palloLeft; 
@@ -227,11 +230,12 @@ function numero(){
     document.querySelector("#numero").appendChild(num); 
     num.style.top=100;
     document.querySelector(".numeroanim").innerHTML="+"+klikkauksenMaara;
-    setTimeout(poistanumero,5000)
+    setTimeout(poistanumero,300)
 }
 function poistanumero(){
    document.querySelector(".numeroanim").remove(".numeroanim")
 }
+
 
 
 
